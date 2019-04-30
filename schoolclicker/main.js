@@ -37,6 +37,13 @@ function convertClickToPoints() {
     updateValues()
 }
 
+function afkgain() {
+    essays += 1
+}
+
+window.setInterval(function() {
+    afkgain()
+}, 1000)
 
 
 updateValues()
