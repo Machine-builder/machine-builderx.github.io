@@ -21,21 +21,35 @@
 
         <br>
 
-        <button onclick="gainClick()" class="button buttonStyle">Write A Useless Essay</button>
-        <button onclick="convertClickToPoints()" class="button buttonStyle">Mark Written Essays</button>
+        <button onclick="gainClick()" class="buttonSmooth">Write A Useless Essay</button>
+        <button onclick="convertClickToPoints()" class="buttonSmooth">Mark Written Essays</button>
+
+        <p id="persecondInfo"></p>
 
         <p>Buy things to help you out through this useless school career</p>
         
         <div style="width: 100%; display: table;">
             <div style="display: table-row">
                 <div style="width: 300px; display: table-cell; height:100px; overflow-y: scroll;">
+                    <p>[Buy Things To Auto-Produce Essays]</p>
                     <!-- This is the left side of the table -->
-
-                    
+                    <div id="scrollRegionLeft" style="text-align:left">
+                        <!-- where the buttons appear at runtime -->
+                    </div>
                 </div>
 
-                <div style="display: table-cell; height:100px; overflow-y: scroll;">
+                <div style="width: 300px; display: table-cell; height:100px; overflow-y: scroll;">
+                    <p>[Buy Things To Auto-Mark Essays]</p>
                     <!-- This is the right side of the table -->
+                    <div id="scrollRegionRight" style="text-align:left">
+                        <!-- where the buttons appear at runtime -->
+                    </div>
+                </div>
+
+                <div style="width: 300px; display: table-cell; height:100px;">
+                    <!-- This is the spacer at the right side of the table -->
+                    <div id="scrollRegionSpacer" style="text-align:left">
+                    </div>
 
 
                 </div>
