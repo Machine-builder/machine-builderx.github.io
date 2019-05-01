@@ -88,9 +88,6 @@ points = loadData['points']
 autos = loadData['autos']
 autos_markers = loadData['autos_markers']
 
-var autosnames = []
-var newautos = []
-
 saveautos.forEach(function(value) {
     var index = saveautos.indexOf(value)
     if (index >= autos.length) {
@@ -98,17 +95,6 @@ saveautos.forEach(function(value) {
     }
 })
 console.log(autos)
-
-var newautosnames = []
-autos.forEach(function(value) {
-    newautosnames.push( value["name"] )
-})
-
-autosnames.forEach(function(name) {
-    if (!(name in newautosnames)) {
-        console.log(newautosnames)
-    }
-})
 
 function clearsave() {
     delete_cookie("gamesavedata")
