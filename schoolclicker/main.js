@@ -255,7 +255,6 @@ function afkgain() {
     }
 
     updateValues()
-    renderScrollRegion()
     calculatePerSecond()
 }
 
