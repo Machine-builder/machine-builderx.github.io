@@ -31,17 +31,18 @@ function bake_cookie(name, value) {
     var d = new Date();
     d.setTime(d.getTime() + (50000 * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
-
-    var cookie = [name, '=', JSON.stringify(value), ';', expires, '; domain=.', window.location.host.toString(), '; path=/;'].join('');
-    document.cookie = cookie;
+    var cookie = [name, '=', JSON.stringify(value), ';', expires, '; path=/;'].join('')
+    document.cookie = cookie
 }
 
 function read_cookie(name) {
-    var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+    var result = document.cookie.match(new RegExp(name + '=([^;]+)'))
     console.log("read cookie")
     console.log(result)
-    result && (result = JSON.parse(result[1]));
-    return result;
+    result = JSON.parse(result[1])
+    console.log('output of cookie read')
+    console.log(result)
+    return result
 }
 
 function delete_cookie(name) {
@@ -121,7 +122,7 @@ var loadData = read_cookie( "gamesavedata" )
 console.log("Original load data")
 console.log(loadData)
 
-if (loadData==null) {
+if (loadData == null) {
     console.log("Creating first load data because no cookie was found")
     loadData = {
         "essays": essays,
@@ -143,7 +144,7 @@ autos = loadData['autos']
 autos_markers = loadData['autos_markers']
 
 function clearSave() {
-    deleteCookie("gamesavedata")
+    delete_cookie("gamesavedata")
 }
 
 function savegame() {
