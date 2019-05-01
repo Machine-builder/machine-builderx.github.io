@@ -38,39 +38,87 @@ var autos = [
         "current": 0,
         "per": 75,
         "costIncrements": 1500
+    },
+    {
+        "name": "Premium Online Essay Generator",
+        "current": 0,
+        "per": 210,
+        "costIncrements": 3800
+    },
+    {
+        "name": "Robotic Essay Writer",
+        "current": 0,
+        "per": 500,
+        "costIncrements": 9000
+    },
+    {
+        "name": "Server-farm Essay Writer",
+        "current": 0,
+        "per": 1800,
+        "costIncrements": 50000
+    },
+    {
+        "name": "AI Essay Writer",
+        "current": 0,
+        "per": 5500,
+        "costIncrements": 450000
     }
 ]
 
 var autos_markers = [
     {
-        "name": "+ Substitute Teacher",
+        "name": "Substitute Teacher",
         "current": 0,
         "per": 2,
         "costIncrements": 5
     },
     {
-        "name": "+ Half-Time Teacher",
+        "name": "Half-Time Teacher",
         "current": 0,
         "per": 10,
         "costIncrements": 40
     },
     {
-        "name": "+ Full-Time Teacher",
+        "name": "Full-Time Teacher",
         "current": 0,
         "per": 20,
         "costIncrements": 120
     },
     {
-        "name": "+ Highschool Teacher",
+        "name": "Highschool Teacher",
         "current": 0,
         "per": 40,
         "costIncrements": 680
     },
     {
-        "name": "+ Dedicated Marker",
+        "name": "Dedicated Marker",
         "current": 0,
         "per": 75,
         "costIncrements": 1500
+    },
+    {
+        "name": "Online Essay Marker",
+        "current": 0,
+        "per": 210,
+        "costIncrements": 3800
+    },
+    {
+        "name": "Automated Essay Marker",
+        "current": 0,
+        "per": 500,
+        "costIncrements": 9000
+    },
+    {
+        "name": "Large-scale Essay Marker",
+        "current": 0,
+        "per": 1800,
+        "costIncrements": 50000
+    },
+    {
+        "name": "AI Essay Marker",
+        "current": 0,
+        "per": 5500,
+        "costIncrements": 450000
     }
 ]
 
