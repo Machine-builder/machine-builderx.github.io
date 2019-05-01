@@ -38,15 +38,9 @@ function bake_cookie(name, value) {
 
 function read_cookie(name) {
     var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
-
-    console.log("first result :")
+    console.log("read cookie")
     console.log(result)
-
     result && (result = JSON.parse(result[1]));
-
-    console.log("second result :")
-    console.log(result)
-
     return result;
 }
 
