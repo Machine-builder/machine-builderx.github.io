@@ -39,9 +39,11 @@ function read_cookie(name) {
     var result = document.cookie.match(new RegExp(name + '=([^;]+)'))
     console.log("read cookie")
     console.log(result)
-    result = JSON.parse(result[1])
-    console.log('output of cookie read')
-    console.log(result)
+    if (result != null) {
+        result = JSON.parse(result[1])
+        console.log('output of cookie read')
+        console.log(result)
+    }
     return result
 }
 
