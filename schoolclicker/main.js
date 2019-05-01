@@ -1,3 +1,5 @@
+import { setCookie } from "../cookiecheff.js"
+
 let essays = 0
 let perClick = 1
 
