@@ -88,9 +88,6 @@ points = loadData['points']
 autos = loadData['autos']
 autos_markers = loadData['autos_markers']
 
-console.log(autos)
-console.log(saveautos)
-
 var autosnames = []
 var newautos = []
 
@@ -100,6 +97,7 @@ saveautos.forEach(function(value) {
         autos.push(value)
     }
 })
+console.log(autos)
 
 var newautosnames = []
 autos.forEach(function(value) {
