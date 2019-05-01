@@ -300,7 +300,7 @@ function calculatePerSecond() {
     })
 
     let ratioValue = 0
-    if ( !((overAllClick == 0) && (overAllMark == 0))) {
+    if ( !((overAllClick == 0) && (overAllMark == 0))) { // generate a value corresponding to both the essays /sec and the marking /sec
         ratioValue = ( overAllClick / overAllMark ) - 1.0
     }
 
