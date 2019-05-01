@@ -90,6 +90,7 @@ autos_markers = loadData['autos_markers']
 console.log(autos)
 console.log(saveautos)
 
+var newautos = []
 saveautos.forEach(function(value) {
 })
 
