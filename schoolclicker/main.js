@@ -1,4 +1,4 @@
-let essays = 0 // game object
+let essays = 0
 let perClick = 1
 
 let points = 0
