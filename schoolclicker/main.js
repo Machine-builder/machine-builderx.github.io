@@ -62,6 +62,7 @@ var autos_markers = [
 ]
 
 var saveautos = autos
+var saveautos_markers = autos_markers
 
 var loadData = read_cookie( "gamesavedata" )
 
