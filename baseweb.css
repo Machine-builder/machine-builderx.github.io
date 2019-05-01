@@ -46,8 +46,8 @@ p {
     box-shadow: 0 9px #999;
 }
 
-.buttonSmooth {
-    padding: 15px 25px;
+.buttonSmoothSmaller {
+    padding: 15px 5px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
