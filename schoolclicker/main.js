@@ -32,6 +32,12 @@ var autos = [
         "current": 0,
         "per": 40,
         "costIncrements": 680
+    },
+    {
+        "name": "Free Online Essay Generator",
+        "current": 0,
+        "per": 75,
+        "costIncrements": 1500
     }
 ]
 
