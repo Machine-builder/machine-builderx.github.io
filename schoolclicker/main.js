@@ -301,7 +301,9 @@ function calculatePerSecond() {
 
     let ratioValue = 0
     if ( !((overAllClick == 0) && (overAllMark == 0))) {
-        console.log("can do")
+        ratioValue = (
+            overAllClick / overAllMark
+        )
     }
 
     setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
