@@ -5,6 +5,13 @@ function setCookie(cname, cvalue, exdays = 50000) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function deleteCookie(cname, cvalue, exdays = -50) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + "delete" + ";" + expires + ";path=/";
+}
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -119,6 +126,11 @@ autos = loadData['autos']
 autos_markers = loadData['autos_markers']
 
 console.log(loadData)
+// console.log( JSON.stringify(loadData) )
+
+function clearSave() {
+    deleteCookie("gamesavedata")
+}
 
 function savegame() {
     loadData = {
