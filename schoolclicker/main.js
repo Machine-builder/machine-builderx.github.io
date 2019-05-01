@@ -305,7 +305,7 @@ function calculatePerSecond() {
     }
 
     setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
-    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + "...")
+    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + ratioValue)
 }
 
 calculatePerSecond()
