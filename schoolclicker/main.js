@@ -128,7 +128,7 @@ console.log(loadData)
 if (loadData==null) {
     loadData = {
         "essays": essays,
-        "perClick": 1,
+        "perClick": perClick,
         "points": points,
         "autos": autos,
         "autos_markers": autos_markers
@@ -151,12 +151,12 @@ function clearSave() {
 function savegame() {
     loadData = {
         "essays": essays,
-        "perClick": 1,
+        "perClick": perClick,
         "points": points,
         "autos": autos,
         "autos_markers": autos_markers
     }
-    setCookie( "gamesavedata", JSON.stringify(loadData) )
+    bake_cookie( "gamesavedata", JSON.stringify(loadData) )
 }
 
 function setP( p, text ) {
