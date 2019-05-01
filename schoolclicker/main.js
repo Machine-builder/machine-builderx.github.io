@@ -1,7 +1,41 @@
+function setCookie(cname, cvalue, exdays = 50000) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(cname) {
+    var user = getCookie(cname);
+    return user
+}
+
+function seconds_time() {
+    var time = Math.floor(new Date().getTime() / 1000)
+    return time
+}
+
+console.log(seconds_time())
+
 let essays = 0
 let perClick = 1
 
-let points = 9000
+let points = 0
 let range_points_min = 4
 let range_points_max = 6
 
@@ -9,35 +43,93 @@ var delay = 1000
 
 var autos = [
     {
-        "name": "+ Vocabulary",
+        "name": "Minimal Afternoon Activities",
         "current": 0,
         "per": 2,
         "costIncrements": 5
     },
     {
-        "name": "+ Plagiarism Skills",
+        "name": "Handwriting Speed",
         "current": 0,
         "per": 10,
-        "costIncrements": 25
+        "costIncrements": 40
+    },
+    {
+        "name": "Hired Essay Writers",
+        "current": 0,
+        "per": 20,
+        "costIncrements": 120
+    },
+    {
+        "name": "Advanced Hired Essay Writers",
+        "current": 0,
+        "per": 40,
+        "costIncrements": 680
     }
 ]
 
 var autos_markers = [
     {
-        "name": "+ Teacher Mk.1",
+        "name": "+ Substitute Teacher",
         "current": 0,
         "per": 2,
         "costIncrements": 5
     },
     {
-        "name": "+ Teacher Mk.2",
+        "name": "+ Half-Time Teacher",
         "current": 0,
         "per": 10,
-        "costIncrements": 25
+        "costIncrements": 40
+    },
+    {
+        "name": "+ Full-Time Teacher",
+        "current": 0,
+        "per": 20,
+        "costIncrements": 120
+    },
+    {
+        "name": "+ Highschool Teacher",
+        "current": 0,
+        "per": 40,
+        "costIncrements": 680
     }
 ]
 
+var loadData = getCookie("gamesavedata")
+console.log(loadData)
 
+if (loadData=="") {
+    loadData = {
+        "essays": essays,
+        "perClick": 1,
+        "points": points,
+        "autos": autos,
+        "autos_markers": autos_markers
+    }
+    setCookie( "gamesavedata", JSON.stringify(loadData) )
+} else {
+    loadData = JSON.parse( "gamesavedata" )
+    setCookie( "gamesavedata", JSON.stringify(loadData) )
+}
+
+essays = loadData['essays']
+perClick = loadData['perClick']
+points = loadData['points']
+autos = loadData['autos']
+autos_markers = loadData['autos_markers']
+
+console.log(loadData)
+
+function savegame() {
+    loadData = {
+        "essays": essays,
+        "perClick": 1,
+        "points": points,
+        "autos": autos,
+        "autos_markers": autos_markers
+    }
+    setCookie( "gamesavedata", JSON.stringify(loadData) )
+}
 
 function setP( p, text ) {
     document.getElementById(p).innerHTML = text
@@ -98,10 +190,10 @@ function tryBuyIndex(index, tag) {
             autos_markers[index]['current'] += 1
         }
 
-        console.log("Bought +1 for : " + name)
+        // console.log("Bought +1 for : " + name)
 
     } else {
-        console.log("Cannot afford this buy : " + name)
+        // console.log("Cannot afford this buy : " + name)
     }
 
     updateValues()
@@ -116,7 +208,8 @@ function renderScrollRegion() {
         scrollRegion += `
         <button onclick='tryBuyIndex(`+ ci +`, "essays")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
         <br>Cost : ` + cost + " points" + `
-        <br>++ : ` + value['per'] + " per second" + "</button><br>"
+        <br>++ : ` + value['per'] + " per second" + `
+        <br>Current Level : ` + value['current'] + "</button><br>"
         ci += 1
     })
     scrollRegion += "</div>"
@@ -129,11 +222,14 @@ function renderScrollRegion() {
         scrollRegion += `
         <button onclick='tryBuyIndex(`+ ci +`, "marker")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
         <br>Cost : ` + cost + " points" + `
-        <br>++ : ` + value['per'] + " per second" + "</button><br>"
+        <br>++ : ` + value['per'] + " per second" + `
+        <br>Current Level : ` + value['current'] + "</button><br>"
         ci += 1 // currently this button is linked to buying auto essay writers not marks FIX THIS RN / ASAP
     })
     scrollRegion += "</div>"
     updateScrollRegionRight(scrollRegion)
+
+    calculatePerSecond()
 }
 
 function afkgain() {
@@ -144,10 +240,7 @@ function afkgain() {
         overAllClick += quickClick
     })
 
-    renderScrollRegion()
-
     essays += overAllClick
-    updateValues()
 
     // auto-mark essays
     
@@ -163,7 +256,7 @@ function afkgain() {
     }
 
     essays += -overAllMark
-    console.log(overAllMark)
+    // console.log(overAllMark)
 
     var i = 0
     for (i=0; i < overAllMark; i++) {
@@ -171,13 +264,31 @@ function afkgain() {
     }
 
     updateValues()
-    
-    setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
+    renderScrollRegion()
+    calculatePerSecond()
 }
 
 window.setInterval(function() {
     afkgain()
 }, delay)
 
+function calculatePerSecond() {
+    let overAllClick = 0
+
+    autos.forEach(function( value ) {
+        var quickClick = value['per'] * value['current']
+        overAllClick += quickClick
+    })
+    
+    let overAllMark = 0
+    autos_markers.forEach(function(value) {
+        var quickMark = value['per'] * value['current']
+        overAllMark += quickMark
+    })
+
+    setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
+}
+
+calculatePerSecond()
 renderScrollRegion()
 updateValues()
