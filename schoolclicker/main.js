@@ -119,8 +119,8 @@ function clearsave() {
         'essays': 0,
         'perClick': 1,
         'points': 0,
-        'autos': {},
-        'autos_markers': {}
+        'autos': saveautos,
+        'autos_markers': saveautos_markers
     }
 
     bake_cookie("gamesavedata", loadData)
