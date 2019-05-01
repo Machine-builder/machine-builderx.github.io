@@ -136,9 +136,6 @@ if (loadData == null) {
     bake_cookie( "gamesavedata", loadData )
 }
 
-console.log("Reading cookie load data...")
-loadData = read_cookie( "gamesavedata" )
-
 essays = loadData['essays']
 perClick = loadData['perClick']
 points = loadData['points']

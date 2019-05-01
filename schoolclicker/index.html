@@ -1,13 +1,14 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="interface.css" />
+        <link rel="stylesheet" type="text/css" href="../baseweb.css">
 
         <title>School Clicker</title>
     </head>
     <body style="font-family:Arial" >
 
         <h1>Shitty School Clicker Game</h1>
-        <!-- <p><b>Based on the education system designed by the NSW government</b></p> -->
+        
         <p>
             Premise of this actually awful game : 
             <br><i>Write completely useless essays to gain essay-writing skill to write more useless essays...?</i>
@@ -30,8 +31,8 @@
         <br>
 
         <b>
-            <p id="count_essays" class="borderText"></p>
-            <p id="count_points" class="borderText"></p>
+            <p id="count_essays">  <!-- The text is added here with the magic of javascript --> </p>
+            <p id="count_points">  <!-- The text is added here with the magic of javascript --> </p>
         </b>
 
         <br>
@@ -39,34 +40,22 @@
         <button onclick="gainClick()" class="buttonSmooth">Write A Useless Essay</button>
         <button onclick="convertClickToPoints()" class="buttonSmooth">Mark Written Essays</button>
 
-        <p id="persecondInfo"></p>
-
-        <p>Buy things to help you out through this useless school career</p>
+        <p id="persecondInfo">  <!-- The text is added here with the magic of javascript --> </p>
         
         <div style="width: 100%; display: table;">
             <div style="display: table-row">
                 <div style="width: 300px; display: table-cell; height:100px; overflow-y: scroll;">
-                    <p>[Buy Things To Auto-Produce Essays]</p>
-                    <!-- This is the left side of the table -->
-                    <div id="scrollRegionLeft" style="text-align:left; height:300px">
+                    <p>Upgrade auto essay production</p>
+                    <div id="scrollRegionLeft" style="text-align:center; height:300px">
                         <!-- where the buttons appear at runtime -->
                     </div>
                 </div>
 
                 <div style="width: 300px; display: table-cell; height:100px; overflow-y: scroll;">
-                    <p>[Buy Things To Auto-Mark Essays]</p>
-                    <!-- This is the right side of the table -->
-                    <div id="scrollRegionRight" style="text-align:left; height:300px">
+                    <p>Upgrade auto essay marking</p>
+                    <div id="scrollRegionRight" style="text-align:center; height:300px">
                         <!-- where the buttons appear at runtime -->
                     </div>
-                </div>
-
-                <div style="width: 300px; display: table-cell; height:100px;">
-                    <!-- This is the spacer at the right side of the table -->
-                    <div id="scrollRegionSpacer" style="text-align:left">
-                    </div>
-
-
                 </div>
             </div>
         </div>
