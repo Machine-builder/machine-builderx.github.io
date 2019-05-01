@@ -153,6 +153,9 @@ function clearSave() {
 }
 
 function savegame() {
+
+    console.log("Save game initiated")
+
     loadData = {
         "essays": essays,
         "perClick": perClick,
@@ -160,7 +163,11 @@ function savegame() {
         "autos": autos,
         "autos_markers": autos_markers
     }
-    bake_cookie( "gamesavedata", JSON.stringify(loadData) )
+
+    console.log("Current game data...")
+    console.log(loadData)
+
+    bake_cookie( "gamesavedata", loadData)
 }
 
 function setP( p, text ) {
