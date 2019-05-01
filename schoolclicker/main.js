@@ -96,7 +96,9 @@ var newautos = []
 
 saveautos.forEach(function(value) {
     var index = saveautos.indexOf(value)
-    if (index >= autos.length
+    if (index >= autos.length) {
+        
+    }
 })
 
 var newautosnames = []
