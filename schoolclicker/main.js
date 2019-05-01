@@ -191,6 +191,7 @@ function tryBuyIndex(index, tag) {
 
     updateValues()
     renderScrollRegion()
+    calculatePerSecond()
 }
 
 function renderScrollRegion() {
