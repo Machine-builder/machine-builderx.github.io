@@ -55,8 +55,8 @@ p {
 }
 
 .buttonSmoothSmaller {
-    padding: 15px 5px;
-    font-size: 24px;
+    padding: 15px 10px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     outline: none;
