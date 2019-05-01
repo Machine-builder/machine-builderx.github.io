@@ -90,6 +90,10 @@ autos_markers = loadData['autos_markers']
 console.log(autos)
 console.log(saveautos)
 
+saveautos.forEach(function(value) {
+    
+})
+
 function clearsave() {
     delete_cookie("gamesavedata")
 }
