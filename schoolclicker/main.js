@@ -28,7 +28,11 @@ function getCookie(cname) {
 }
 
 function bake_cookie(name, value) {
-    var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+    var d = new Date();
+    d.setTime(d.getTime() + (50000 * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+
+    var cookie = [name, '=', JSON.stringify(value), ';', expires, '; domain=.', window.location.host.toString(), '; path=/;'].join('');
     document.cookie = cookie;
 }
 
