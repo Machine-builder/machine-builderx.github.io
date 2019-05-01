@@ -29,7 +29,7 @@ function getCookie(cname) {
 
 function bake_cookie(name, value) {
     var d = new Date();
-    d.setTime(d.getTime() + (50000 * 24 * 60 * 60 * 1000));
+    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
     var cookie = [name, '=', JSON.stringify(value), ';', expires, '; path=/;'].join('')
     document.cookie = cookie
