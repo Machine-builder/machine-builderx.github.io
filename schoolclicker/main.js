@@ -115,11 +115,15 @@ saveautos_markers.forEach(function(value) {
 
 function clearsave() {
     
-    essays = 0
-    perClick = 1
-    points = 0
-    autos = {}
-    autos_markers = {}
+    loadData = {
+        'essays': 0,
+        'perClick': 1,
+        'points': 0,
+        'autos': {},
+        'autos_markers': {}
+    }
+
+    bake_cookie("gamesavedata", loadData)
 
     location.reload()
 }
