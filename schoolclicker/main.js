@@ -114,7 +114,14 @@ saveautos_markers.forEach(function(value) {
 })
 
 function clearsave() {
-    delete_cookie("gamesavedata")
+    
+    essays = 0
+    perClick = 1
+    points = 0
+    autos = {}
+    autos_markers = {}
+
+    location.reload()
 }
 
 function savegame() {
