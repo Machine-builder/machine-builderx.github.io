@@ -288,7 +288,13 @@ function calculatePerSecond() {
         overAllMark += quickMark
     })
 
+    let ratioValue = 0
+    if ( !((overAllClick == 0) && (overAllMark == 0))) {
+        console.log("can do")
+    }
+
     setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
+    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + "...")
 }
 
 calculatePerSecond()
