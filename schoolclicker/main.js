@@ -1,8 +1,4 @@
-import bake_cookie from "./cookiecheff.js"
-import read_cookie from "./cookiecheff.js"
-import delete_cookie from "./cookiecheff.js"
-
-let essays = 0
+let essays = 0 // game object
 let perClick = 1
 
 let points = 0
