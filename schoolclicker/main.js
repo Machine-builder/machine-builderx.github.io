@@ -96,9 +96,15 @@ saveautos.forEach(function(value) {
     autosnames.push( value["name"] )
 })
 
-var oldautosnames = []
-saveautos.forEach(function(value) {
-    oldautosnames.push( value["name"] )
+var newautosnames = []
+autos.forEach(function(value) {
+    newautosnames.push( value["name"] )
+})
+
+autosnames.forEach(function(name) {
+    if (!(name in newautosnames)) {
+        
+    }
 })
 
 function clearsave() {
