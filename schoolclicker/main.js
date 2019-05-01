@@ -103,7 +103,7 @@ autos.forEach(function(value) {
 
 autosnames.forEach(function(name) {
     if (!(name in newautosnames)) {
-        
+
     }
 })
 
