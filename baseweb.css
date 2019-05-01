@@ -46,6 +46,14 @@ p {
     box-shadow: 0 9px #999;
 }
 
+.buttonSmooth:hover {background-color: #3e8e41}
+
+.buttonSmooth:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .buttonSmoothSmaller {
     padding: 15px 5px;
     font-size: 24px;
@@ -59,12 +67,13 @@ p {
     box-shadow: 0 9px #999;
 }
 
-.buttonSmooth:hover {background-color: #3e8e41}
+.buttonSmoothSmaller:hover {background-color: #3e8e41}
 
-.buttonSmooth:active {
+.buttonSmoothSmaller:active {
     background-color: #3e8e41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
 
 /* cool buttons! */
