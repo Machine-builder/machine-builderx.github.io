@@ -221,8 +221,6 @@ function renderScrollRegion() {
     })
     scrollRegion += "</div>"
     updateScrollRegionRight(scrollRegion)
-
-    calculatePerSecond()
 }
 
 function afkgain() {
