@@ -93,7 +93,7 @@ console.log(saveautos)
 
 var autosnames = []
 var newautos = []
-
+//
 saveautos.forEach(function(value) {
     autosnames.push( value["name"] )
 })
