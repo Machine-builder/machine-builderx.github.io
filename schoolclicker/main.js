@@ -123,9 +123,12 @@ var autos_markers = [
 ]
 
 var loadData = read_cookie( "gamesavedata" )
+
+console.log("Original load data")
 console.log(loadData)
 
 if (loadData==null) {
+    console.log("Creating first load data because no cookie was found")
     loadData = {
         "essays": essays,
         "perClick": perClick,
@@ -136,6 +139,7 @@ if (loadData==null) {
     bake_cookie( "gamesavedata", loadData )
 }
 
+console.log("Reading cookie load data...")
 loadData = read_cookie( "gamesavedata" )
 
 essays = loadData['essays']
