@@ -6,6 +6,7 @@ let range_points_min = 4
 let range_points_max = 6
 
 var delay = 1000
+var counter = 0
 
 var autos = [
     {
@@ -92,6 +93,7 @@ console.log(saveautos)
 
 var autosnames = []
 var newautos = []
+counter = 0
 saveautos.forEach(function(value) {
     autosnames.push( value["name"] )
 })
