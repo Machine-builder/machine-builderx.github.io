@@ -65,6 +65,12 @@ var autos_markers = [
         "current": 0,
         "per": 40,
         "costIncrements": 680
+    },
+    {
+        "name": "+ Dedicated Marker",
+        "current": 0,
+        "per": 75,
+        "costIncrements": 1500
     }
 ]
 
