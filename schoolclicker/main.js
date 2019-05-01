@@ -27,17 +27,33 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie(cname) {
-    var user = getCookie(cname);
-    return user
+function bake_cookie(name, value) {
+    var cookie = [name, '=', JSON.stringify(value), '; domain=.', window.location.host.toString(), '; path=/;'].join('');
+    document.cookie = cookie;
+}
+
+function read_cookie(name) {
+    var result = document.cookie.match(new RegExp(name + '=([^;]+)'));
+
+    console.log("first result :")
+    console.log(result)
+
+    result && (result = JSON.parse(result[1]));
+
+    console.log("second result :")
+    console.log(result)
+
+    return result;
+}
+
+function delete_cookie(name) {
+    document.cookie = [name, '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.', window.location.host.toString()].join('');
 }
 
 function seconds_time() {
     var time = Math.floor(new Date().getTime() / 1000)
     return time
 }
-
-console.log(seconds_time())
 
 let essays = 0
 let perClick = 1
@@ -102,7 +118,7 @@ var autos_markers = [
     }
 ]
 
-var loadData = getCookie("gamesavedata")
+var loadData = read_cookie( "gamesavedata" )
 console.log(loadData)
 
 if (loadData=="") {
@@ -124,9 +140,6 @@ perClick = loadData['perClick']
 points = loadData['points']
 autos = loadData['autos']
 autos_markers = loadData['autos_markers']
-
-console.log(loadData)
-// console.log( JSON.stringify(loadData) )
 
 function clearSave() {
     deleteCookie("gamesavedata")
