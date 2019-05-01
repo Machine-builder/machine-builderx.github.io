@@ -184,7 +184,7 @@ function renderScrollRegion() {
         <button onclick='tryBuyIndex(`+ ci +`, "essays")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
         <br>Cost : ` + cost + " points" + `
         <br>++ : ` + value['per'] + " per second" + `
-        <br>Current Level : ` + value['current'] + "</button><br>"
+        <br>Current Level : ` + value['current'] + "</button><br><br>"
         ci += 1
     })
     scrollRegion += "</div>"
