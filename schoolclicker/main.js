@@ -91,7 +91,6 @@ console.log(autos)
 console.log(saveautos)
 
 saveautos.forEach(function(value) {
-    
 })
 
 function clearsave() {
