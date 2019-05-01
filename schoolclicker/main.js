@@ -106,7 +106,12 @@ saveautos.forEach(function(value) {
         autos.push(value)
     }
 })
-console.log(autos) // add the missing auto-essay writers when an old save is loaded
+saveautos_markers.forEach(function(value) {
+    var index = saveautos_markers.indexOf(value)
+    if (index >= autos_markers.length) {
+        autos_markers.push(value)
+    }
+})
 
 function clearsave() {
     delete_cookie("gamesavedata")
