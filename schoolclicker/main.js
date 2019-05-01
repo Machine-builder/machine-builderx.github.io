@@ -1,5 +1,5 @@
-import { setCookie, getCookie, deleteCookie, bake_cookie, delete_cookie, read_cookie} from "../cookiecheff.js"
-
+import { bake_cookie, delete_cookie, read_cookie } from "../cookiecheff.js"
+//
 let essays = 0
 let perClick = 1
 
