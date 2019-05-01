@@ -97,7 +97,7 @@ var newautos = []
 saveautos.forEach(function(value) {
     var index = saveautos.indexOf(value)
     if (index >= autos.length) {
-        
+        autos.push(value)
     }
 })
 
