@@ -17,18 +17,39 @@ p {
     float: left; /* Float the buttons side by side */
   }
   
-  .btn-group button:not(:last-child) {
+.btn-group button:not(:last-child) {
     border-right: none; /* Prevent double borders */
-  }
+}
   
-  /* Clear floats (clearfix hack) */
-  .btn-group:after {
+/* Clear floats (clearfix hack) */
+.btn-group:after {
     content: "";
     clear: both;
     display: table;
+}
+  
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
   }
   
-  /* Add a background color on hover */
-  .btn-group button:hover {
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
     background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
