@@ -198,7 +198,7 @@ function renderScrollRegion() {
         <button onclick='tryBuyIndex(`+ ci +`, "marker")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
         <br>Cost : ` + cost + " points" + `
         <br>++ : ` + value['per'] + " per second" + `
-        <br>Current Level : ` + value['current'] + "</button><br>"
+        <br>Current Level : ` + value['current'] + "</button><br><br>"
         ci += 1 // currently this button is linked to buying auto essay writers not marks FIX THIS RN / ASAP
     })
     scrollRegion += "</div>"
