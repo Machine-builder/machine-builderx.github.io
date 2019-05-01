@@ -93,9 +93,11 @@ console.log(saveautos)
 
 var autosnames = []
 var newautos = []
+
 counter = 0
 saveautos.forEach(function(value) {
     autosnames.push( value["name"] )
+    counter += 1
 })
 
 var newautosnames = []
