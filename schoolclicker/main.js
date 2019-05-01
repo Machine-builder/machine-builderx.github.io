@@ -96,6 +96,11 @@ saveautos.forEach(function(value) {
     autosnames.push( value["name"] )
 })
 
+var oldautosnames = []
+saveautos.forEach(function(value) {
+    oldautosnames.push( value["name"] )
+})
+
 function clearsave() {
     delete_cookie("gamesavedata")
 }
