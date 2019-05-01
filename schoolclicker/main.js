@@ -121,7 +121,7 @@ var autos_markers = [
 var loadData = read_cookie( "gamesavedata" )
 console.log(loadData)
 
-if (loadData=="") {
+if (loadData==null) {
     loadData = {
         "essays": essays,
         "perClick": 1,
@@ -129,11 +129,10 @@ if (loadData=="") {
         "autos": autos,
         "autos_markers": autos_markers
     }
-    setCookie( "gamesavedata", JSON.stringify(loadData) )
-} else {
-    loadData = JSON.parse( "gamesavedata" )
-    setCookie( "gamesavedata", JSON.stringify(loadData) )
+    bake_cookie( "gamesavedata", loadData )
 }
+
+loadData = read_cookie( "gamesavedata" )
 
 essays = loadData['essays']
 perClick = loadData['perClick']
