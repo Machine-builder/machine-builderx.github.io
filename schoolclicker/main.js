@@ -87,6 +87,9 @@ points = loadData['points']
 autos = loadData['autos']
 autos_markers = loadData['autos_markers']
 
+console.log(autos)
+console.log(saveautos)
+
 function clearsave() {
     delete_cookie("gamesavedata")
 }
