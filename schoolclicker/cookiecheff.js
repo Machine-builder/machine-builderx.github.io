@@ -1,18 +1,18 @@
-export function setCookie(cname, cvalue, exdays = 50000) {
+function setCookie(cname, cvalue, exdays = 50000) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-export function deleteCookie(cname, cvalue, exdays = -50) {
+function deleteCookie(cname, cvalue, exdays = -50) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + "delete" + ";" + expires + ";path=/";
 }
 
-export function getCookie(cname) {
+function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for(var i = 0; i < ca.length; i++) {
@@ -27,7 +27,7 @@ export function getCookie(cname) {
     return "";
 }
 
-export function bake_cookie(name, value) {
+function bake_cookie(name, value) {
     var d = new Date();
     d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
     var expires = "expires="+d.toUTCString();
@@ -35,7 +35,7 @@ export function bake_cookie(name, value) {
     document.cookie = cookie
 }
 
-export function read_cookie(name) {
+function read_cookie(name) {
     var result = document.cookie.match(new RegExp(name + '=([^;]+)'))
     console.log("read cookie")
     console.log(result)
@@ -47,11 +47,11 @@ export function read_cookie(name) {
     return result
 }
 
-export function delete_cookie(name) {
+function delete_cookie(name) {
     document.cookie = [name, '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.', window.location.host.toString()].join('');
 }
 
-export function seconds_time() {
+function seconds_time() {
     var time = Math.floor(new Date().getTime() / 1000)
     return time
 }
