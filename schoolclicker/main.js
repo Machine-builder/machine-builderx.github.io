@@ -199,8 +199,8 @@ function setP( p, text ) {
 }
 
 function updateValues() {
-    var text_essays = " Useless Essays Written : " + essays
-    var text_points = " School Points Earned : " + points
+    var text_essays = " Useless Essays Written : " + tostring(essays)
+    var text_points = " School Points Earned : " + tostring(points)
 
     setP("count_essays", text_essays)
     setP("count_points", text_points)
@@ -271,9 +271,9 @@ function renderScrollRegion() {
         var cost = (value["current"]+1) * value['costIncrements'] * 10 // Work out the cost for each thingo based on it's current value
         scrollRegion += `
         <button onclick='tryBuyIndex(`+ ci +`, "essays")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
-        <br>Cost : ` + cost + " points" + `
-        <br>++ : ` + value['per'] + " per second" + `
-        <br>Current Level : ` + value['current'] + "</button><br><br>"
+        <br>Cost : ` + tostring(cost) + " points" + `
+        <br>++ : ` + tostring(value['per']) + " per second" + `
+        <br>Current Level : ` + tostring(value['current']) + "</button><br><br>"
         ci += 1
     })
     scrollRegion += "</div>"
@@ -285,9 +285,9 @@ function renderScrollRegion() {
         var cost = (value["current"]+1) * value['costIncrements'] * 10 // Work out the cost for each thingo based on it's current value
         scrollRegion += `
         <button onclick='tryBuyIndex(`+ ci +`, "marker")' class='buttonSmoothSmaller'>Buy x1 ` + value["name"] + `
-        <br>Cost : ` + cost + " points" + `
-        <br>++ : ` + value['per'] + " per second" + `
-        <br>Current Level : ` + value['current'] + "</button><br><br>"
+        <br>Cost : ` + tostring(cost) + " points" + `
+        <br>++ : ` + tostring(value['per']) + " per second" + `
+        <br>Current Level : ` + tostring(value['current']) + "</button><br><br>"
         ci += 1 // currently this button is linked to buying auto essay writers not marks FIX THIS RN / ASAP
     })
     scrollRegion += "</div>"
@@ -352,8 +352,8 @@ function calculatePerSecond() {
         ratioValue = ( overAllClick / overAllMark ) - 1.0
     }
 
-    setP("persecondInfo", "Essays Written Per Second : " + overAllClick + ", Essays Marked Per Second : " + overAllMark)
-    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + ratioValue)
+    setP("persecondInfo", "Essays Written Per Second : " + tostring(overAllClick) + ", Essays Marked Per Second : " + tostring(overAllMark))
+    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + tostring(ratioValue))
 }
 
 calculatePerSecond()
