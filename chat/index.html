@@ -15,6 +15,7 @@
             
     <script  src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script> 
     <script>
+        console.log(location.hostname)
         $(function(){ 
         var socket = null; 
         var msgBox = $("#chatbox textarea"); 
@@ -32,7 +33,7 @@
         if (!window["WebSocket"]) { 
             alert("Error: Your browser does not support web  sockets.") 
         } else { 
-            socket = new WebSocket("ws://localhost:8080/room"); 
+            socket = new WebSocket(location.hostname); 
             socket.onclose = function() { 
             alert("Connection has been closed."); 
             } 
