@@ -10,13 +10,13 @@ var counter = 0
 
 var autos = [
     {
-        "name": "Minimal Afternoon Activities",
+        "name": "Fewer Afternoon Activities",
         "current": 0,
         "per": 2,
         "costIncrements": 5
     },
     {
-        "name": "Handwriting Speed",
+        "name": "Increased Handwriting Speed",
         "current": 0,
         "per": 10,
         "costIncrements": 40
@@ -62,6 +62,18 @@ var autos = [
         "current": 0,
         "per": 5500,
         "costIncrements": 450000
+    },
+    {
+        "name": "Bribed Nerd Writer",
+        "current": 0,
+        "per": 8750,
+        "costIncrements": 1800000
+    },
+    {
+        "name": "Speedy Nerd Writer",
+        "current": 0,
+        "per": 16500,
+        "costIncrements": 7500000
     }
 ]
 
@@ -119,6 +131,18 @@ var autos_markers = [
         "current": 0,
         "per": 5500,
         "costIncrements": 450000
+    },
+    {
+        "name": "Teacher Gang",
+        "current": 0,
+        "per": 8750,
+        "costIncrements": 1800000
+    },
+    {
+        "name": "OP Teacher Club",
+        "current": 0,
+        "per": 16500,
+        "costIncrements": 7500000
     }
 ]
 
@@ -154,12 +178,37 @@ saveautos.forEach(function(value) {
         autos.push(value)
     }
 })
+
 saveautos_markers.forEach(function(value) {
     var index = saveautos_markers.indexOf(value)
     if (index >= autos_markers.length) {
         autos_markers.push(value)
     }
 })
+
+for (current = 0; (current < autos.length); current++) {
+    var val_autos = autos[current]
+    var val_autos_save = saveautos[current]
+    var val_name = val_autos_save['name']
+    var val_per = val_autos_save['per']
+    var val_costInc = val_autos_save['costIncrements']
+
+    autos[current]['name'] = val_name
+    autos[current]['per'] = val_per
+    autos[current]['costIncrements'] = val_costInc
+}
+
+for (current = 0; (current < autos_markers.length); current++) {
+    var val_autos = autos_markers[current]
+    var val_autos_save = saveautos_markers[current]
+    var val_name = val_autos_save['name']
+    var val_per = val_autos_save['per']
+    var val_costInc = val_autos_save['costIncrements']
+
+    autos_markers[current]['name'] = val_name
+    autos_markers[current]['per'] = val_per
+    autos_markers[current]['costIncrements'] = val_costInc
+}
 
 function clearsave() {
     
