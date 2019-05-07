@@ -396,13 +396,10 @@ function calculatePerSecond() {
         overAllMark += quickMark
     })
 
-    let ratioValue = 0
-    if ( !((overAllClick == 0) && (overAllMark == 0))) { // generate a value corresponding to both the essays /sec and the marking /sec
-        ratioValue = ( overAllClick / overAllMark ) - 1.0
-    }
+    let ratioValue = overAllClick - overAllMark
 
     setP("persecondInfo", "Essays Written Per Second : " + tostring(overAllClick) + ", Essays Marked Per Second : " + tostring(overAllMark))
-    setP("persecondInfo2", "Essays to Marking ratio <i>(Hint : Keep this close to 0)</i> : " + tostring(ratioValue))
+    setP("persecondInfo2", "Essays Written/Marked Difference <i>(Hint : Keep this close to 0)</i> : " + tostring(ratioValue))
 }
 
 calculatePerSecond()
