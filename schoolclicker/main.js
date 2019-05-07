@@ -74,6 +74,12 @@ var autos = [
         "current": 0,
         "per": 16500,
         "costIncrements": 7500000
+    },
+    {
+        "name": "The OG Nerd Gang",
+        "current": 0,
+        "per": 80000,
+        "costIncrements": 25000000
     }
 ]
 
@@ -143,6 +149,12 @@ var autos_markers = [
         "current": 0,
         "per": 16500,
         "costIncrements": 7500000
+    },
+    {
+        "name": "Harry The Octopus",
+        "current": 0,
+        "per": 80000,
+        "costIncrements": 25000000
     }
 ]
 
