@@ -2,10 +2,10 @@
 var aText = new Array( "ph" );
 
 function iSpeed() {
-    return Math.floor(Math.random()*80) // anywhere between 0-x
+    return Math.floor(Math.random()*40) // anywhere between 0-x
 }
 function lSpeed() {
-    return Math.floor(Math.random()*400) // anywhere between 0-x
+    return Math.floor(Math.random()*100) // anywhere between 0-x
 }
 
 var iIndex = 0; // start printing array at this posision
