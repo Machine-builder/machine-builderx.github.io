@@ -25,7 +25,7 @@ var random_event_chances = {
 
 function round_num(n,d) {
     var m=10**d;
-    return Math.round(n/d)*d;
+    return Math.round(n*m)/m;
 }
 
 function enemy_army_strength_increase() {
@@ -67,7 +67,9 @@ function random_events() {
 }
 
 function military() {
-    cost = round_num(1 / money_adjust / military_cheap, 3)
+    costr = ( 0.8 / money_adjust ) * military_cheap
+    cost = round_num(costr, 2)
+    console.log("military cost :", costr)
 
     if (money < cost) {
         alert("You cannot afford this! The cost is : "+String(cost))
@@ -84,7 +86,7 @@ function military() {
 }
 
 function improve_infrastructure() {
-    cost = round_num(( 0.44 / money_adjust ) * effect_infrastructure, 3)
+    cost = round_num(( 0.44 / money_adjust ) * effect_infrastructure, 2)
 
     if (money < cost) {
         alert("You cannot afford this! The cost is : "+String(cost))
@@ -111,7 +113,7 @@ function save_money() {
 }
 
 function educate() {
-    cost = round_num(education_cost, 3)
+    cost = round_num(education_cost, 2)
 
     if (money < cost) {
         alert("You cannot afford this! The cost is : "+String(cost))
@@ -132,7 +134,7 @@ function educate() {
 }
 
 function trans_aqua() {
-	cost = round_num(30 + (10 / money_adjust) + ((transaqua/10)*5), 3)
+	cost = round_num(30 + (10 / money_adjust) + ((transaqua/10)*5), 2)
 	
 	if (money < cost) {
         alert("You cannot afford this! This cost is : "+String(cost))
@@ -154,16 +156,21 @@ function animate_ship() {
     window.setTimeout(  )
 }
 
+function getrealhunger() {
+    return ( hunger + ( 0.9 + ( enemy_army_strength * 0.12 ) ) - ( 1 + ( infrastructure * 0.8 ) ) );
+}
+
 
 function passer() { }
 
 function turn_base() {
     if (infrastructure<0){infrastructure=0}
+    realhunger = getrealhunger()
 
     die = false;
     win = false;
 
-    if (hunger >= 50) {
+    if (realhunger >= 50) {
         die = true;
         alert("Chad lacks the food required for basic survival.")
     } else if (enemy_army_strength > 35) {
@@ -172,7 +179,7 @@ function turn_base() {
     } else if (transaqua >= 100) {
         win = true;
         alert("Chad's transaqua is now sustainable and can support all of Chad.")
-    } else if (hunger <= 0) {
+    } else if (realhunger <= 0) {
         win = true;
         alert("Chad has solved it's food crisis.")
     }
@@ -205,8 +212,8 @@ function timer() {
         load_page_content();
         page_content_loaded = true;
     }
+    realhunger = getrealhunger()
     if (hunger<0){hunger=0}
-    realhunger = ( hunger + ( 0.9 + ( enemy_army_strength * 0.12 ) ) - ( 1 + ( infrastructure * 0.8 ) ) );
     if (realhunger<0){realhunger=0}
     if (enemy_army_strength<0){enemy_army_strength=0}
 
@@ -249,7 +256,7 @@ function load_page_content() {
     }
 
     if (selected_country==2) { // France
-        military_cheap = 80
+        military_cheap = 0.8
         random_event_chances['civil_unrest'] = 0.8
         placeholder_img.src = "france1.jpg"
         oga.innerHTML = String( oga.innerHTML ).replace( "PLACEHOLDER", "Charles De Gaul" )
