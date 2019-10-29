@@ -1,0 +1,190 @@
+* {
+    font-family: sans-serif, "Arial";
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#blob {
+    position:relative;
+    font-size: 0.8em;
+    background-color: dodgerblue;
+    text-align: center;
+    border-bottom-width: 4px;
+    border-bottom-color: teal;
+    border-bottom-style: solid;
+    margin-bottom: 2em;
+    margin-left: 4.675em;
+    margin-right: 4.675em;
+    margin-top: 0.625em;
+    padding-top: 1em;
+    padding-bottom: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#blobl {
+    background-color: dodgerblue;
+    text-align: left;
+    border-bottom-width: 4px;
+    border-bottom-color: teal;
+    border-bottom-style: solid;
+    margin-bottom: 2em;
+    margin-left: 4.375em;
+    margin-right: 4.375em;
+    margin-top: 0.625em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+body {
+    background-color: gainsboro;
+    /*background-image: url("china1.jpg");*/
+}
+
+header {
+    text-align: center;
+    font-family: serif, "Geogia";
+    background-color: #0066cc;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    font-size: 0.8em;
+
+}
+
+footer {
+    background-color: lightsteelblue;
+    padding-top: 4.375em;
+    padding-bottom: 4.375em;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
+    width: 100%;
+}
+
+#subhead {
+    font-style: italic;
+    font-size: 0.7em;
+    font-family: monospace, "courier";
+}
+#thin {
+    font-family: serif, "Gerogia";
+    text-decoration: none;
+    font-size: 2.5em;
+}
+#headings {
+	font-family: serif, "Gerogia";
+	text-decoration: none;
+	font-size: 2em;
+	text-align: center;
+}
+#hdes {
+    font-size: 1em;
+    font-family: serif, "Gerogia";
+}
+
+#lpara {
+    text-align: left;
+    margin: 0px 0px 0px;
+    margin-left: 1em;
+    padding-bottom: 0px;
+    height: 14em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#lparac {
+    text-align: center;
+    margin: 0px 0px 0px;
+    margin-left: 1em;
+    padding-bottom: 0px;
+    height: 8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1em;
+}
+#ldesc {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 0px;
+    font-family: serif, times, "Times New Roman";
+}
+img {
+float: top;
+width: 13em;
+height: 18em;
+}
+.box {
+float: left;
+width: 25%;
+padding-left: 1em;
+padding-right: 1em;
+}
+.box2 {
+	float: left;
+	width: 33%;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.box3 {
+        float: left;
+        width: 20%;
+        padding-left: 1em;
+        padding-right: 1em;
+}
+
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+#carhead {
+text-align: center;
+font-size: 1.2em;
+font-family: serif, "Times New Roman";
+}
+#lparab {
+text-align: left;
+margin: 0;
+margin-left: 0.8em;
+height: 13em;
+}
+
+#center {
+position: left;
+position: absolute;
+bottom: 2em;
+}
+#middle {
+	position: left;
+	bottom: 3em;
+}
+/*#div_border_1px {
+	border-style: solid;
+	border-color: lightgray;
+	border-width: 1px;
+}
+*/
+button {
+padding: 0.75em 1em 0.75em;
+}
+#input_button  {
+padding: 0.75em 1em 0.75em;
+}
+
+#port {
+	position: relative;
+	transform: translateX(0%);
+	margin-top: 2em;
+	border-style: solid;
+	border-color: gainsboro;
+	border-width: 1px;
+}
+#descr {
+	text-align: left;
+	margin-top: 0em;
+}
+#ship_animation {
+    position: absolute;
+    top: 5em;
+    left: -8em;
+	height: 5em;
+	width: 7em;
+    z-index: 999;
+}
