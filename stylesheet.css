@@ -1,0 +1,25 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background: rgb(83, 124, 190);
+    color: white;
+    font-size: 30px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #537cbe;
+    color: white;
+    text-align: center;
+}
+
+button.styledbutton {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2d405f;
+    color: #ffffff;
+}
