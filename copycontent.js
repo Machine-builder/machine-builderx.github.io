@@ -9,6 +9,7 @@ function copyNavBar() {
 <a href="./programdownloads.html">Programs</a>"`
 }
 
+// todo : background-image: url("backgroundimg2.png"); - background image for footer
 function copyFooterRegion() {
     document.getElementById("footer_region").innerHTML = `
 <div class="footerbreak" style="height: 200px;"></div>
