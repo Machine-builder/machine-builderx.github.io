@@ -92,3 +92,64 @@ p.programtitle {
 p.programdescription {
     font-size: 20px;
 }
+
+.fab {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fas {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+  
+  
+.fab:hover {
+    opacity: 0.7;
+}
+.fas:hover {
+    opacity: 0.7;
+}
+  
+/* Youtube */
+.fa-youtube {
+    background: rgba(201,13,16,1.00);
+    color: white;
+}
+/* Twitch */
+.fa-twitch {
+    background: rgba(120,25,168,1.00);
+    color: white;
+}
+/* Instagram */
+.fa-instagram {
+    background: rgba(209,45,145,1.00);
+    color: white;
+}
+/* Twitter*/
+.fa-twitter {
+    background: rgba(0,100,255,1.00);
+    color: white;
+}
+/* Discord*/
+.fa-discord {
+    background: rgba(42,104,213,1.00);
+    color: white;
+}
+/* PayPal*/
+.fa-paypal {
+    background: rgba(54,57,185,1.00);
+    color: white;
+}
+/* Bars*/
+.fa-bars {
+    background: rgb(0, 0, 0);
+    color: white;
+}
