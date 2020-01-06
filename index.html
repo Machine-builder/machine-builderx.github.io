@@ -14,8 +14,8 @@
     <!-- End Google Tag Manager -->
     <script type="text/javascript" src="sidenav.js"></script>
     <script src="https://kit.fontawesome.com/92522efa72.js" crossorigin="anonymous"></script>
-
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="copycontent.js"></script>
 
     <title>MACHINE_BUILDER's Page</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -23,23 +23,15 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2CWF8V" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2CWF8V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-
 
     <div class='header'>
         <h1>MACHINE_BUILDER's Personal Page</h1>
         <p>The website for MACHINE_BUILDER on YouTube</p>
     </div>
 
-    <div id="sideNav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index">Home</a>
-        <a href="./addondownloads">Addons</a>
-        <a href="./programdownloads">Programs</a>
-    </div>
+    <div id="sideNav" class="sidenav"></div>
 
     <button type="button"
         onclick="openNav()"
@@ -60,18 +52,12 @@
         Live subscriber count on YouTube :<br>
         <iframe height="80px" width="300px" frameborder="0" src="https://www.youtuberealtime.com/embed/#!/UC8FBQgo4AWwKFX97h60NKOQ" style="border: 0; width:300px; height:80px; background-color: #FFF;"></iframe>
         <br>
+
         (Link to youtube channel is at the bottom of the page)<br>
         </p>
     </div>
 
-    <div class="footerbreak"></div>
-    <div class="footer">
-        <p>
-            <a href="https://www.youtube.com/channel/UC8FBQgo4AWwKFX97h60NKOQ?sub_confirmation=1" target='_blank' class="fab fa-youtube"></a>
-            <a href="https://www.instagram.com/machine_builder2/" target='_blank'  class="fab fa-instagram"></a>
-            <a href="https://discord.gg/jYHAKY2" target='_blank'  class="fab fa-discord"></a>
-            <a href="https://www.paypal.me/machinebuilder" target='_blank'  class="fab fa-paypal"></a>
-        </p>
+    <div id="footer_region">
     </div>
 </body>
 

@@ -6,20 +6,6 @@
     font-size: 30px;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #537cbe;
-    color: white;
-    text-align: center;
-}
-
-div.footerbreak {
-    height: 200px;
-}
-
 div#downloadsection {
     border: 2px solid black;
     border-radius: 5px;
@@ -109,8 +95,8 @@ p.programdescription {
     text-decoration: none;
     border-radius: 50%;
 }
-  
-  
+
+
 .fab:hover {
     opacity: 0.7;
 }
