@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    
+        <title>MBEC Docs</title>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    </head>
+    <body>
+
+        <div class="container border" style="margin-top: 15px;">
+
+            <h1>MBEC Documentation</h1>
+
+            <hr>
+            <h2>Entity Commands</h2>
+
+            <hr>
+            <h3>Event Commands</h3>
+            <p>
+                Commands can now be used within entity events
+                <br>
+                This can be achieved with the following setup
+            </p>
+            <pre class="prettyprint"><code class="language-json">
+        "minecraft:entity_spawned": {
+            "randomize": [
+                {
+                    "weight": 5,
+                    "execute": { "commands": [ "/say this is option 1" ] }
+                },
+                {
+                    "weight": 5,
+                    "execute": { "commands": [ "/say this is option 2" ] }
+                }
+            ]
+        }
+            </code></pre>
+
+            <hr>
+            <h3>On-death Commands</h3>
+            
+            <p>
+                Commands can also be executed on an entity’s death.
+                <br>
+                Here is an example setup
+            </p>
+            <pre class="prettyprint"><code class="language-json">
+        {
+            "format_version": "1.16.0",
+            "minecraft:entity": {
+                "on_death_commands": [
+                    "/say I just died :("
+                ]
+                // ...
+            }
+        } 
+            </code></pre>
+            
+            <p>
+                Commands can be specified to only run if the entity was killed by the player.
+                <br>
+                Here's how to set that up
+            </p>
+            <pre class="prettyprint"><code class="language-json">
+
+        {
+            "format_version": "1.16.0",
+            "minecraft:entity": {
+                "on_death_commands": {
+                    "player_killed": [
+                        "/say I was killed by a player"
+                    ]
+                }
+                // ...
+            }
+        }
+            </code></pre>
+
+
+        
+
+        </div>
+
+    </body>
+</html>
