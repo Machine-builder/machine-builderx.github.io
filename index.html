@@ -1,60 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
 
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-P2CWF8V');</script>
-    <!-- End Google Tag Manager -->
-    <script type="text/javascript" src="sidenav.js"></script>
-    <script src="https://kit.fontawesome.com/92522efa72.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="copycontent.js"></script>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>MACHINE_BUILDER's Page</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-</head>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2CWF8V" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        <link rel="stylesheet" href="style.css">
+        <script src="sidenav.js"></script>
+        <script src="content.js"></script>
+        <script src="links.js"></script>
+        
+        <script data-ad-client="ca-pub-1317293593640127" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    <div class='header'>
-        <h1>MACHINE_BUILDER's YouTube Page</h1>
-        <p>The website for MACHINE_BUILDER on YouTube</p>
-    </div>
+        <title>MACHINE_BUILDER-Home</title>
+    </head>
 
-    <div id="sideNav" class="sidenav"></div>
-    <button type="button" onclick="openNav()" class="styledbutton" id="navButton">☰</button>
+    <body>
 
-    <div class='textchunk description'>
-        <p>Welcome to my website!<br>
-        As some of you may know, I used to run a website hosted on weebly<br>
-        (<a href='https://machinebuilder-dl.weebly.com'>https://machinebuilder-dl.weebly.com</a>)<br>
-        But since then, I have decided to host with GitHub instead,<br>
-        because it allows for more freedom :)<br>
-        <br>
-        The weebly site will still be open and running,<br>
-        but new downloads and files will be placed here instead.<br>
-        <br>
-        Thanks for your support!<br>
-        <br>
-        Live subscriber count on YouTube :<br>
-        <iframe height="80px" width="300px" frameborder="0" src="https://www.youtuberealtime.com/embed/#!/UC8FBQgo4AWwKFX97h60NKOQ" style="border: 0; width:300px; height:80px; background-color: #FFF;"></iframe>
-        <br>
-        (Click the YouTube icon below to subscribe!)<br>
-        </p>
-    </div>
+        <div id="sidenavbar" class="sidenav">
+        </div>
+        
+        <div id="main">
 
-    <div id="footer_region">
-    </div>
-</body>
+            <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; navigation</span>
+
+            <div style="text-align: center;">
+                <h1>MACHINE_BUILDER - Home</h1>
+            </div>
+
+            <hr/>
+
+            <!-- about content -->
+
+            <div class="container" style="text-align: center">
+
+                <div class="container border rounded">
+            
+                    <h2>About</h2>
+
+                    <p>
+                        Hey there! My name's MACHINE_BUILDER, and I run a (pretty small) YouTube channel! You can go check it out & subscribe using the button at the bottom of this page!
+                    </p>
+
+                    <p>
+                        I love programming, and Minecraft. And the two go quite well together :) .. I create useful programs & tools, and fun add-ons for MCBE
+                    </p>
+                    <p>
+                        If you've got any questions, or just want to talk to me, feel free to join the Discord server with the button in the footer
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="footer-content" class="footer">
+            </div>
+
+        </div>
+
+    </body>
 
 </html>
